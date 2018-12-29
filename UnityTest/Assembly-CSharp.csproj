@@ -62,8 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\0-Aggregate\BaseCharacter.cs" />
-    <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\1-Entities\Races\Human.cs" />
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\BasicAttribute.cs" />
+    <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\Domain.cs" />
+    <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\Level.cs" />
+    <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\3-Enums\DomainType.cs" />
+    <Compile Include="Assets\Scripts\0-Infraestructure\2-Services\0-DomainServices\LevelService.cs" />
+    <Compile Include="Assets\Scripts\1-Domain\Level\LevelService.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/workbench_pessoal/workspace/UnityTest/UnityTest/UnityTest/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
