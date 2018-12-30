@@ -280,10 +280,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 678649178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21edbfeabd44a724f84a0261dcbd3253, type: 3}
+  m_Script: {fileID: 11500000, guid: 63d55ab0c9ec96048942b1c759657c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Terra
 --- !u!4 &678649180
 Transform:
   m_ObjectHideFlags: 0
