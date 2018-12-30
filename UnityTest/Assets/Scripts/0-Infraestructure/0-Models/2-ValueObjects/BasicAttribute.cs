@@ -5,11 +5,24 @@
 [Serializable]
 public class BasicAttribute {
 
-    public int maxHP;
-    public int maxSP;
-    public int maxMP;
+    public int MaxHP { get; set; }
+    public int MaxSP { get; set; }
+    public int MaxMP { get; set; }
 
-    private float CurrentHP;
-    private float CurrentSP;
-    private float CurrentMP;
+    public float CurrentHP { get; set; }
+    public float CurrentSP { get; set; }
+    public float CurrentMP { get; set; }
+
+    private Level _Level = new Level();
+
+    public Level Level {
+        get
+        {
+            return _Level;
+        }
+        set
+        {
+            _Level = value;
+        }
+    }
 }
