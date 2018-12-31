@@ -16,4 +16,13 @@ public abstract class BaseCharacterService : MonoBehaviour, IBaseCharacterServic
 	void Update () {
 		
 	}
+
+    public void ApplyDamage(DomainType domain, float damage) {
+        int defense = GetCharacter().Proficiency.GetDomain(domain).Defense.CurrentLevel;
+        if (defense != 0) {
+            damage = damage / defense;
+        }
+        GetCharacter().BasicAttribute.CurrentHP -= damage;
+        GetCharacter().Proficiency.GetDomain(domain).Defense.AddExperience((int)damage);
+    }
 }

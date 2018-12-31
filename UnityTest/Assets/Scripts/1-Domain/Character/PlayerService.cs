@@ -16,6 +16,6 @@ public class PlayerService : BaseCharacterService, IPlayerService {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }

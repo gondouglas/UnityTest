@@ -22,6 +22,38 @@ public class Proficiency {
     private Domain _Nature = new Domain(DomainType.NATURE);
     private Domain _Divine = new Domain(DomainType.DIVINE);
 
+    public Domain GetDomain(DomainType domain) {
+        switch (domain)
+        {
+            case DomainType.SLASH:
+                return _Slash;
+            case DomainType.THRUST:
+                return _Thrust;
+            case DomainType.SMASH:
+                return _Smash;
+            case DomainType.FIRE:
+                return _Fire;
+            case DomainType.WATER:
+                return _Water;
+            case DomainType.EARTH:
+                return _Earth;
+            case DomainType.WIND:
+                return _Wind;
+            case DomainType.MIND:
+                return _Mind;
+            case DomainType.LIGHT:
+                return _Light;
+            case DomainType.DARK:
+                return _Dark;
+            case DomainType.NATURE:
+                return _Nature;
+            case DomainType.DIVINE:
+                return _Divine;
+            default:
+                return null;
+        }
+    }
+
     public Domain Slash
     {
         get

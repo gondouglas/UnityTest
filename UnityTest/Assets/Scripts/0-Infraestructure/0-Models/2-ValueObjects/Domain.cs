@@ -12,17 +12,31 @@ public class Domain {
         DomainType = domain;
     }
 
-    private Level _Level = new Level();
+    private Level _Attack = new Level();
 
-    public Level Level
+    public Level Attack
     {
         get
         {
-            return _Level;
+            return _Attack;
         }
         set
         {
-            _Level = value;
+            _Attack = value;
+        }
+    }
+
+    private Level _Defense = new Level();
+
+    public Level Defense
+    {
+        get
+        {
+            return _Defense;
+        }
+        set
+        {
+            _Defense = value;
         }
     }
 }

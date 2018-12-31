@@ -19,21 +19,71 @@ public class Level {
     {
         get { return _CurrentLevel; }
         set { _CurrentLevel = value;  }
-    } //nível atual
+    } 
+
     public int CurrentExperience {
         get { return _CurrentExperience; }
-        set { _CurrentExperience = value; }
-    } //experiência atual
+        private set { _CurrentExperience = value; }
+    } 
+
     public int FirstLevelExperience {
         get { return _FirstLevelExperience; }
         set { _FirstLevelExperience = value; }
-    } //experiência do primeiro nível
+    } 
+
     public int NextLevelExperience {
         get { return _NextLevelExperience; }
         set { _NextLevelExperience = value; }
-    } //experiência do próximo nível
+    } 
+
     public float ScaleFactor {
         get { return _ScaleFactor; }
         set { _ScaleFactor = value; }
-    } //fator de escala para calculo da experiência do próximo nível
+    } 
+
+
+    /// <summary>
+    /// Aualiza a experiência do proximo nível
+    /// </summary>
+    /// <returns>experiência do proxímo nível</returns>
+    public int UpdateNextLevelExperience()
+    {
+        this.NextLevelExperience = Convert.ToInt32(this.CurrentLevel * this.ScaleFactor * this.FirstLevelExperience);
+
+        return this.NextLevelExperience;
+    }
+
+    /// <summary>
+    /// Adiciona uma quantidade de experiência verificando se passou de nível
+    /// </summary>
+    /// <param name="exp">experiência a ser adicionada</param>
+    /// <returns>Retorna verdadeiro se subir de nível e falso se não subir</returns>
+    public bool AddExperience(int exp)
+    {
+
+        this.CurrentExperience += exp;
+
+        //experiência atual é maior ou igual ao necessário para subir de nível
+        if (this.CurrentExperience >= this.NextLevelExperience)
+        {
+
+            //remove a quantidade necessária da experiência atual
+            this.CurrentExperience -= this.NextLevelExperience;
+
+            //Sobe de nível
+            LevelUp();
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Sobe de nível
+    /// </summary>
+    public void LevelUp()
+    {
+        this.CurrentLevel++;
+        UpdateNextLevelExperience();
+    }
 }
