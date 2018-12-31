@@ -1,6 +1,12 @@
 /UnityTest/Temp
+/UnityTest/Temp/*
 /UnityTest/Library
+/UnityTest/Library/*
 /UnityTest/obj
+/UnityTest/obj/*
 /UnityTest/Packages
+/UnityTest/Packages/*
 /UnityTest/Logs
+/UnityTest/Logs/*
 /UnityTest/ProjectSettings
+/UnityTest/ProjectSettings/*
