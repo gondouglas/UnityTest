@@ -9,6 +9,8 @@ using UnityEngine;
 [Serializable]
 public abstract class BaseCharacter {
 
+    public BaseRace Race { get; set; }
+
     private BasicAttribute _BasicAttribute = new BasicAttribute();
     
     public BasicAttribute BasicAttribute {

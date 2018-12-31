@@ -9,13 +9,20 @@ public class PlayerService : BaseCharacterService, IPlayerService {
         return Player;
     }
 
-    // Use this for initialization
-    void Start () {
+    public override BaseRace GetRace()
+    {
+        Player.Race = new Human();
+        return Player.Race;
+    }
 
+
+    // Use this for initialization
+    new void Start () {
+        base.Start();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	new void Update () {
+        base.Start();
 	}
 }

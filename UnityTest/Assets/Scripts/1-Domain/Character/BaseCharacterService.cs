@@ -6,14 +6,17 @@ public abstract class BaseCharacterService : MonoBehaviour, IBaseCharacterServic
 
 
     public abstract BaseCharacter GetCharacter();
+    public abstract BaseRace GetRace();
 
 	// Use this for initialization
-	void Start () {
+	protected void Start () {
+        GetCharacter().BasicAttribute = GetRace().GetRacialBasicAttribute(GetCharacter().BasicAttribute);
+        GetCharacter().Proficiency = GetRace().GetRacialProficiency(GetCharacter().Proficiency);
 
-	}
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	protected void Update () {
 		
 	}
 
