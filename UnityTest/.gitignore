@@ -4,3 +4,9 @@ obj/
 Packages/
 ProjectSettings/
 Temp/
+Library/*
+Logs/*
+obj/*
+Packages/*
+ProjectSettings/*
+Temp/*
