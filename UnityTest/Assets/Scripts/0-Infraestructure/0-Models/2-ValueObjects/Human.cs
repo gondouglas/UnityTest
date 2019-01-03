@@ -15,6 +15,12 @@ public class Human : BaseRace
         basicAttribute.CurrentHP = basicAttribute.MaxHP;
         basicAttribute.CurrentSP = basicAttribute.MaxSP;
         basicAttribute.CurrentMP = basicAttribute.MaxMP;
+        basicAttribute.Strength = 1;
+        basicAttribute.Dexterity = 1;
+        basicAttribute.Constitution = 1;
+        basicAttribute.Intelligence = 1;
+        basicAttribute.Wisdom = 1;
+        basicAttribute.Charisma = 1;
 
         return basicAttribute;
     }

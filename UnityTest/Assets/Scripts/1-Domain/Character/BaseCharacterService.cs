@@ -22,6 +22,12 @@ public abstract class BaseCharacterService : MonoBehaviour, IBaseCharacterServic
 
     public void ApplyDamage(DomainType domain, float damage) {
         int defense = GetCharacter().Proficiency.GetDomain(domain).Defense.CurrentLevel;
+
+        if (domain != DomainType.THRUST && domain != DomainType.SLASH && domain != DomainType.SMASH)
+            defense += GetCharacter().BasicAttribute.Intelligence;
+        else
+            defense += GetCharacter().BasicAttribute.Constitution;
+
         if (defense != 0) {
             damage = damage / defense;
         }
