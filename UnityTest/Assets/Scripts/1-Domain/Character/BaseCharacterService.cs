@@ -10,7 +10,7 @@ public abstract class BaseCharacterService : MonoBehaviour, IBaseCharacterServic
 
 	// Use this for initialization
 	protected void Start () {
-        GetCharacter().BasicAttribute = GetRace().GetRacialBasicAttribute(GetCharacter().BasicAttribute);
+        GetCharacter().BasicAttributes = GetRace().GetRacialBasicAttribute(GetCharacter().BasicAttributes);
         GetCharacter().Proficiency = GetRace().GetRacialProficiency(GetCharacter().Proficiency);
 
     }
@@ -24,14 +24,14 @@ public abstract class BaseCharacterService : MonoBehaviour, IBaseCharacterServic
         int defense = GetCharacter().Proficiency.GetDomain(domain).Defense.CurrentLevel;
 
         if (domain != DomainType.THRUST && domain != DomainType.SLASH && domain != DomainType.SMASH)
-            defense += GetCharacter().BasicAttribute.Intelligence;
+            defense += GetCharacter().BasicAttributes.Intelligence;
         else
-            defense += GetCharacter().BasicAttribute.Constitution;
+            defense += GetCharacter().BasicAttributes.Constitution;
 
         if (defense != 0) {
             damage = damage / defense;
         }
-        GetCharacter().BasicAttribute.CurrentHP -= damage;
+        GetCharacter().BasicAttributes.CurrentHP -= damage;
         GetCharacter().Proficiency.GetDomain(domain).Defense.AddExperience((int)damage);
     }
 }

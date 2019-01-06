@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\0-Bases\BaseRace.cs" />
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\1-Entities\GameApplication.cs" />
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\1-Entities\Player.cs" />
-    <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\BasicAttribute.cs" />
+    <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\BasicAttributes.cs" />
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\Domain.cs" />
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\Human.cs" />
     <Compile Include="Assets\Scripts\0-Infraestructure\0-Models\2-ValueObjects\Level.cs" />

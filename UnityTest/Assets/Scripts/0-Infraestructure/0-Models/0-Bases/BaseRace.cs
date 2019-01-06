@@ -5,5 +5,5 @@ using UnityEngine;
 public abstract class BaseRace
 {
     public abstract Proficiency GetRacialProficiency(Proficiency proficiency);
-    public abstract BasicAttribute GetRacialBasicAttribute(BasicAttribute basicAttribute);
+    public abstract BasicAttributes GetRacialBasicAttribute(BasicAttributes basicAttribute);
 }

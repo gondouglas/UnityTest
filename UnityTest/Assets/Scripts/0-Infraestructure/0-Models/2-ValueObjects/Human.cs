@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Human : BaseRace
 {
-    public override BasicAttribute GetRacialBasicAttribute(BasicAttribute basicAttribute)
+    public override BasicAttributes GetRacialBasicAttribute(BasicAttributes basicAttribute)
     {
         basicAttribute.Level.CurrentLevel = 1;
         basicAttribute.Level.FirstLevelExperience = 150;
@@ -15,12 +15,12 @@ public class Human : BaseRace
         basicAttribute.CurrentHP = basicAttribute.MaxHP;
         basicAttribute.CurrentSP = basicAttribute.MaxSP;
         basicAttribute.CurrentMP = basicAttribute.MaxMP;
-        basicAttribute.Strength = 1;
-        basicAttribute.Dexterity = 1;
-        basicAttribute.Constitution = 1;
-        basicAttribute.Intelligence = 1;
-        basicAttribute.Wisdom = 1;
-        basicAttribute.Charisma = 1;
+        basicAttribute.StrengthBase = 1;
+        basicAttribute.DexterityBase = 1;
+        basicAttribute.ConstitutionBase = 1;
+        basicAttribute.IntelligenceBase = 1;
+        basicAttribute.WisdomBase = 1;
+        basicAttribute.CharismaBase = 1;
 
         return basicAttribute;
     }

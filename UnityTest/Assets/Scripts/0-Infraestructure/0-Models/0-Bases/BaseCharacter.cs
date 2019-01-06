@@ -11,16 +11,16 @@ public abstract class BaseCharacter {
 
     public BaseRace Race { get; set; }
 
-    private BasicAttribute _BasicAttribute = new BasicAttribute();
+    private BasicAttributes _BasicAttributes = new BasicAttributes();
     
-    public BasicAttribute BasicAttribute {
+    public BasicAttributes BasicAttributes {
         get
         {
-            return _BasicAttribute;
+            return _BasicAttributes;
         }
         set
         {
-            _BasicAttribute = value;
+            _BasicAttributes = value;
         }
     }
 
